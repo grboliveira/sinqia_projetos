@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PagamentosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_PAGAMENTOS.dbo.TBCartoes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TBCartoes">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="NumeroCartao" />
+      <PropertyRef Name="Limite" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumeroCartao" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="Limite" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_PAGAMENTOS.dbo.TBPagamentos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TBPagamentos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumeroCartao" Type="varchar" MaxLength="16" />
+    <Property Name="NumeroPedido" Type="varchar" MaxLength="20" />
+    <Property Name="Valor" Type="float" />
+  </EntityType>
+  <EntityContainer Name="PagamentosModelStoreContainer">
+    <EntitySet Name="TBCartoes" EntityType="Self.TBCartoes" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TBCartoes].[Id] AS [Id], 
+    [TBCartoes].[NumeroCartao] AS [NumeroCartao], 
+    [TBCartoes].[Limite] AS [Limite]
+    FROM [dbo].[TBCartoes] AS [TBCartoes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TBPagamentos" EntityType="Self.TBPagamentos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TBPagamentos].[Id] AS [Id], 
+    [TBPagamentos].[NumeroCartao] AS [NumeroCartao], 
+    [TBPagamentos].[NumeroPedido] AS [NumeroPedido], 
+    [TBPagamentos].[Valor] AS [Valor]
+    FROM [dbo].[TBPagamentos] AS [TBPagamentos]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

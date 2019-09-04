@@ -1,0 +1,41 @@
+﻿* {
+    font-family: 'Josefin Slab', serif;
+}
+
+h1, h2 {
+    /*text-align:center;*/
+}
+
+.header {
+    font-family:  'Josefin Slab', serif;
+}
+.center{
+    text-align: center;
+}
+.margin{
+    margin:20px;
+    padding: 20px;
+
+}
+.cabecalho{
+    background-color: lightgray;
+
+}
+
+.conteudo {
+    /*text-align: center;*/
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.rodape {
+    /*text-align: center;*/
+    background-color: gray;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+}

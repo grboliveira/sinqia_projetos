@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="45d8fc3e-4cb1-41ce-bcfe-0b96726e5942" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50323/ServicePagamentos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicePagamentos.xsd" MetadataType="Schema" ID="06398d9d-a59e-44be-b970-85ac6f71ca06" SourceId="1" SourceUrl="http://localhost:50323/ServicePagamentos.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicePagamentos.wsdl" MetadataType="Wsdl" ID="37af72ed-aae6-48bc-974d-bb2fac04af11" SourceId="1" SourceUrl="http://localhost:50323/ServicePagamentos.svc?wsdl" />
+    <MetadataFile FileName="ServicePagamentos.disco" MetadataType="Disco" ID="0b8ec9b4-ac4d-496a-a1b9-573434060370" SourceId="1" SourceUrl="http://localhost:50323/ServicePagamentos.svc?disco" />
+    <MetadataFile FileName="ServicePagamentos1.xsd" MetadataType="Schema" ID="f84e3279-81df-41e7-882d-7a84d48e6609" SourceId="1" SourceUrl="http://localhost:50323/ServicePagamentos.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicePagamentos2.xsd" MetadataType="Schema" ID="902848cb-045e-428a-b99b-f31801de88a7" SourceId="1" SourceUrl="http://localhost:50323/ServicePagamentos.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

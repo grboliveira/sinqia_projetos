@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="DesenvolvimentoWEB.Vendas.Views.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.0.0.min.js"></script>
+    <script src="../Scripts/popper.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+</head>
+<body >
+   
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <asp:HyperLink ID="HyperLink" CssClass="navbar-brand" runat="server" NavigateUrl="~/Views/Home.aspx">Sinqia</asp:HyperLink>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="menu" aria-controls="menu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <asp:HyperLink ID="HyperLink2" CssClass="nav-link"
+                        runat="server" NavigateUrl="~/Views/CadastroClientes.aspx">
+                        Cad. Clientes
+                    </asp:HyperLink>
+                </li>
+                <li class="nav-item">
+                    <asp:HyperLink ID="HyperLink1" CssClass="nav-link"
+                        runat="server" NavigateUrl="~/Views/CadastroProdutos.aspx">
+                        Cad. Produtos
+                    </asp:HyperLink>
+                </li>
+                <li class="nav-item">
+                    <asp:HyperLink ID="HyperLink3" CssClass="nav-link"
+                        runat="server" NavigateUrl="~/Views/CadastroPedido.aspx">
+                        Pedidos
+                    </asp:HyperLink>
+                </li>
+                <li class="nav-item">
+                    <asp:HyperLink ID="HyperLink4" CssClass="nav-link"
+                        runat="server" NavigateUrl="~/Views/CadastroItem.aspx">
+                        Novos Itens
+                    </asp:HyperLink>
+                </li>
+
+                <li class="nav-item">
+                    <asp:HyperLink ID="HyperLink5" CssClass="nav-link"
+                        runat="server" NavigateUrl="~/Views/ListaItens.aspx">
+                        Lista de Itens
+                    </asp:HyperLink>
+                </li>
+                <li class="nav-item">
+                    <asp:HyperLink ID="HyperLink6" CssClass="nav-link"
+                        runat="server" NavigateUrl="~/Views/CadastroUsuario.aspx">
+                        Cadastro Usuário
+                    </asp:HyperLink>
+                </li>
+            </ul>
+            <ul class="nav-bar">
+                <li class="nav-item">
+                    <asp:HyperLink ID="usuarioHyperLink"
+                        CssClass="nav-link"
+                        runat="server"
+                        NavigateUrl='<%# string.Format("~/Views/CadastroUsuarios.aspx?nome={0}",NomeUsuario) %>'>
+
+                    </asp:HyperLink>
+                </li>
+                <li class="nav-item">
+                    <asp:HyperLink 
+                        ID="logoutHyperLink"
+                        CssClass="nav-link"
+                        NavigateUrl="~/Views/Login.aspx"
+                        runat="server">Logout</asp:HyperLink>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <form id="form1" runat="server">
+         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div>
+            <asp:ContentPlaceHolder ID="conteudo" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
